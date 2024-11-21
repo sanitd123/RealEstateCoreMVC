@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model 
+@{
+    <div>
+        <form asp-controller="Account" asp-action="TryLogin" method="post">
+            <h2>Login</h2>
+            <div>
+                Username: <input id="txtUsername" name="txtUsername" type="text"/>
+            </div>
+            <div>
+                Password: <input id="txtPassword" name="txtPassword" type="text" />
+            </div>
+            <input type="submit" value="Login" />
+        </form>
+
+        <form asp-controller="Account" asp-action="Register">
+            <input type="submit" value="Register New Account" />
+        </form>
+        
+        <form asp-asp-controller="Account" asp-action="AccountRecovery">
+            <input type="submit" value="Forgot Login Info" />
+        </form>
+
+        <div>
+            @ViewData["Message"]
+        </div>
+    </div>
+}

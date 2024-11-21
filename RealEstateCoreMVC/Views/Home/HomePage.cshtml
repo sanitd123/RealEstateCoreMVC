@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <form asp-controller="Home" method="post">
+        <p1>@ViewData["Title"]</p1>
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        
+    </form>
+
+    <form asp-controller="Home" asp-action="GoToLoginPage" method="post">
+        <input type="submit" value="Login Page"/>
+    </form>
+</div>
